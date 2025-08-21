@@ -16,15 +16,12 @@ class TaskStatus(enum.Enum):
 class Task(Base):
     __tablename__ = "tasks"
 
-    id = Column(
-        Integer,
-        primary_key=True,
-        autoincrement=True,
-        unique=True,
-        nullable=False,
-    )
     uuid = Column(
-        UUID(as_uuid=True), default=uuid.uuid4, unique=True, nullable=False
+        UUID(as_uuid=True),
+        default=uuid.uuid4,
+        primary_key=True,
+        unique=True,
+        nullable=False
     )
     title = Column(String(255), nullable=False)
     description = Column(Text, nullable=True)

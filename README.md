@@ -21,7 +21,7 @@ cd skycapital_test
 
 2. Запускаем docker-compose
 ```
-sudo docker compose up --build
+sudo docker compose up
 ```
 
 3. Применяем миграции
@@ -46,7 +46,7 @@ pip install -r requirements.txt
 
 3. Запускаем `postgres`. Если хотите запускать через Docker, то используйте команду
 ```
-sudo docker compose up postgres --build
+sudo docker compose up postgres
 ```
 
 4. Применяем миграции
