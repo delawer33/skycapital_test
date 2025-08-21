@@ -125,7 +125,7 @@ async def update_task(
         logger.error(f"Ошибка при изменении задачи: {e}", exc_info=True)
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Ошибка при обновлении задачи",
+            detail="Ошибка при изменении задачи",
         )
 
     except Exception as e:

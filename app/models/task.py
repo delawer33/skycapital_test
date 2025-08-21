@@ -21,7 +21,7 @@ class Task(Base):
         default=uuid.uuid4,
         primary_key=True,
         unique=True,
-        nullable=False
+        nullable=False,
     )
     title = Column(String(255), nullable=False)
     description = Column(Text, nullable=True)

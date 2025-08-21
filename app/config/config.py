@@ -7,9 +7,7 @@ class Settings(BaseSettings):
     APP_NAME: str = "task_manager"
     DEBUG: bool = True
 
-    DB_URL: PostgresDsn = (
-        
-    )
+    DB_URL: PostgresDsn = ()
 
     model_config = SettingsConfigDict(
         env_file=Path(__file__).parent / ".env", extra="ignore"

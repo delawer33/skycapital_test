@@ -1,4 +1,4 @@
-FROM python:3.11-slim AS builder
+FROM python:3.12-slim AS builder
 
 RUN apt-get update && apt-get install -y \
     python3-dev \
@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY ./app /code/app
 
 
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 WORKDIR /code
 
