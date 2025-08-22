@@ -28,9 +28,7 @@ def event_loop():
 
 @pytest_asyncio.fixture(scope="session", autouse=True)
 async def prepare_database():
-    print("!!" * 200)
     async with engine_test.begin() as conn:
-        print(Base.metadata, "!!!!!!!!!!!!!!!!!!!!!")
         await conn.run_sync(Base.metadata.create_all)
     yield
     async with engine_test.begin() as conn:

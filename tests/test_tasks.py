@@ -97,7 +97,6 @@ async def test_update_task_success(client):
         "status": "in_progress",
     }
     create_resp = await client.post("/tasks/", json=create_data)
-    print(create_resp.json())
     task_uuid = create_resp.json()["uuid"]
 
     update_data = {"title": "Updated", "status": "completed"}

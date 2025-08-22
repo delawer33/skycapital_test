@@ -19,7 +19,6 @@ app_settings = get_settings()
 # access to the values within the .ini file in use.
 config = context.config
 
-print(str(app_settings.DB_URL))
 config.set_main_option('sqlalchemy.url', str(app_settings.DB_URL))
 
 # Interpret the config file for Python logging.
