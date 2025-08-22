@@ -85,14 +85,14 @@ async def get_tasks(
         logger.error(f"Ошибка при получении списка задач: {e}", exc_info=True)
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Ошибка при обновлении задачи",
+            detail="Ошибка при получении списка задач",
         )
 
     except Exception as e:
         logger.error(f"Ошибка при получении списка задач: {e}", exc_info=True)
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Неизввестная ошибка",
+            detail="Неизвестная ошибка",
         )
 
 
@@ -132,7 +132,7 @@ async def update_task(
         logger.error(f"Ошибка при изменении задачи: {e}", exc_info=True)
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Неизввестная ошибка",
+            detail="Неизвестная ошибка",
         )
 
 
